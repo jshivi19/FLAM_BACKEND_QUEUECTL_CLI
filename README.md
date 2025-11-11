@@ -306,6 +306,9 @@ queuectl/
 - Distributed workers
 - Job dependencies
 - Metrics and monitoring
+## Integration with Kafka
+QueueCTL can be extended with **Apache Kafka** to enable distributed and fault-tolerant job processing. Jobs are published to partitioned Kafka topics for parallel execution by worker consumers. Failed jobs are retried with exponential backoff and moved to a **Dead Letter Queue (DLQ)** after exceeding retry limits. This architecture provides scalability, persistence, and fault isolation for reliable background job management.
+
 
 ## License
 
@@ -313,4 +316,4 @@ MIT
 
 ## Author
 
-[Shivi Jain]
+Shivi Jain
