@@ -1,6 +1,8 @@
 from ..job_queue import JobQueue
 from ..job import JobState
 
+import sys
+
 def list_dlq():
     """List jobs in Dead Letter Queue"""
     queue = JobQueue()
@@ -37,4 +39,5 @@ def retry_job(job_id):
     job.attempts = 0
     queue.update_job(job)
     
-    print(f"✓ Job {job_id} moved back to pending queue")
+    checkmark = "OK" if sys.platform == 'win32' else "✓"
+    print(f"{checkmark} Job {job_id} moved back to pending queue")

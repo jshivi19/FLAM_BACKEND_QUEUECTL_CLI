@@ -267,29 +267,31 @@ python test_queuectl.py
 
 ```
 queuectl/
-├── queuectl/
-│   ├── __init__.py
+├── queuectl/                # Main package
+│   ├── commands/            # CLI command handlers
+│   ├── storage/             # Persistence layer
 │   ├── __main__.py          # CLI entry point
 │   ├── job.py               # Job model
 │   ├── job_queue.py         # Queue management
 │   ├── worker_manager.py    # Worker orchestration
-│   ├── config.py            # Configuration
-│   ├── storage/
-│   │   ├── __init__.py
-│   │   └── job_storage.py   # Persistent storage
-│   └── commands/
-│       ├── __init__.py
-│       ├── enqueue.py       # Enqueue command
-│       ├── worker.py        # Worker commands
-│       ├── status.py        # Status command
-│       ├── list_jobs.py     # List command
-│       ├── dlq.py           # DLQ commands
-│       └── config.py        # Config commands
-├── setup.py
-├── requirements.txt
-├── README.md
-└── test_queuectl.py
+│   └── config.py            # Configuration
+├── setup.py                 # Package setup
+├── requirements.txt         # Dependencies
+├── README.md                # This file
+├── QUICKSTART.md            # Quick reference
+├── DESIGN.md                # Architecture details
+├── WINDOWS_GUIDE.md         # Windows-specific help
+├── enqueue_job.py           # Helper script for Windows
+├── quick_demo.py            # Quick demo script
+├── test_queuectl.py         # Test suite
+└── verify_install.py        # Installation verification
 ```
+
+## Additional Documentation
+
+- **[QUICKSTART.md](QUICKSTART.md)** - Quick reference and common commands
+- **[DESIGN.md](DESIGN.md)** - Detailed architecture and design decisions
+- **[WINDOWS_GUIDE.md](WINDOWS_GUIDE.md)** - Windows PowerShell specific instructions
 
 ## Demo Video
 

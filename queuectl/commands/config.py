@@ -1,4 +1,5 @@
 from ..config import get_config
+import sys
 
 def set_config(key, value):
     """Set configuration value"""
@@ -13,4 +14,5 @@ def set_config(key, value):
             return
     
     config.set(key, value)
-    print(f"✓ Configuration updated: {key} = {value}")
+    checkmark = "OK" if sys.platform == 'win32' else "✓"
+    print(f"{checkmark} Configuration updated: {key} = {value}")
