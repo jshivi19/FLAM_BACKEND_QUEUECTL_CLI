@@ -295,7 +295,7 @@ queuectl/
 
 ## Demo Video
 
-[Link to demo video - Upload to Google Drive and add link here]
+https://drive.google.com/file/d/1H1sdTNqOjfNrN-4gS_CtOlQaJ5bGSYvy/view?usp=sharing
 
 ## Future Enhancements
 
